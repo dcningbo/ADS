@@ -28,11 +28,20 @@ function shift(array, index1, index2) {
 }
 
 function insertionSort(array) {
-
+	for (var i = 1; i < array.length; i++) {
+		j = i;
+			while (array[i] < array[j - 1]) {
+			// while (array[i] < array[j - 1] && j > 1) {
+				j = j - 1;
+			}
+		shift(array, i, j);	
+	}
+	return array
 }
 
 // This will generate a random array with 12 elements, print it to the console, and also print what is returned by insertionSort also to the console
 var arr = genRandomArray(12);
+// var arr = [6,5,4,3,2,1]
 console.log(arr)
 console.log(insertionSort(arr));
 
