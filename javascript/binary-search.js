@@ -45,6 +45,7 @@ function binarySearch(array, x) {
 			L = M + 1;
 		}
 	}
+	return false;
 }
 
 var arr = genRandomArray(14);
