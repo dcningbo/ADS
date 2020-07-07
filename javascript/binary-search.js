@@ -29,33 +29,33 @@ function bubbleSort(array) {
 	}
 	return array;
 }
-// return a Boolean: true if x is in array, and false otherwise
+
 function binarySearch(array, x) {
-    var beginIndex = 0;
-    var endIndex = array.length - 1;
-    while (beginIndex < endIndex) {
-		var midPoint = Math.floor((beginIndex + endIndex) / 2);
-		if (array[midPoint] == x) {
-			return true
-		} else if (x < array[midPoint]) {
-			endIndex = midPoint - 1;
+	// return a Boolean: true if x is in array, and false otherwise
+	n = array.length;
+	R = n;
+	L = 1;
+	while (R >= L) {
+		M = Math.floor((L+R)/2);	
+		if (array[M] == x) {
+			return true;
+		} else if (array[M] > x) {
+			R = M - 1;
 		} else {
-			beginIndex = midPoint + 1
+			L = M + 1;
 		}
-    }
-	return false;
+	}
 }
 
 var arr = genRandomArray(14);
-
 console.log(bubbleSort(arr));
-console.log(binarySearch(bubbleSort(arr), 2));
+console.log(binarySearch(bubbleSort(arr), 7));
 
 
 // Do not modify the code below this point--------------------------------
-// module.exports = {
-// 	genRandomArray: genRandomArray,
-// 	swap: swap,
-// 	bubbleSort: bubbleSort,
-// 	binarySearch: binarySearch
-// }
+module.exports = {
+	genRandomArray: genRandomArray,
+	swap: swap,
+	bubbleSort: bubbleSort,
+	binarySearch: binarySearch
+}
