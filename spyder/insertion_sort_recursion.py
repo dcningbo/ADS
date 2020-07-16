@@ -16,15 +16,22 @@ def shift(v,i,j):
     v[j] = store
     return v
 
-def insertion(v):
-    for i in range(1, len(v)):
-        j = i
-        while v[i] < v[j-1] and j > 0:
-            j = j-1
-        shift(v,i,j)
+def sort(v, r):
+    if r <= 1:
+        return v
+    sort(v, r-1)
+    j = r
+    i = r
+    while v[i] < v[j-1] and j > 0:
+        j = j-1
+    shift(v,i,j)
     return v
 
-v = np.random.randint(1,50,20)
+def insertion(v):
+    n = len(v)-1
+    return sort(v,n)
+
+v = np.random.randint(1,50,30)
 print(v)
 sorted = insertion(v)
 print(sorted)
