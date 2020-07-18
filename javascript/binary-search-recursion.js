@@ -35,7 +35,7 @@ function search(array, x, left, right) {
 		return false;
 	}
 	var m = (left + right) / 2;
-	if (array[m] === x) {
+	if (array[m] == x) {
 		return true;
 	} else if (array[m] > x) {
 		right = m - 1;

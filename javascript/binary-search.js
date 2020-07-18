@@ -48,7 +48,7 @@ function binarySearch(array, x) {
 	return false;
 }
 
-var arr = genRandomArray(14);
+var arr = genRandomArray(2);
 console.log(bubbleSort(arr));
 console.log(binarySearch(bubbleSort(arr), 7));
 
