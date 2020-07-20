@@ -24,7 +24,8 @@ def insertion(v):
         shift(v,i,j)
     return v
 
-v = np.random.randint(1,50,20)
+# v = np.random.randint(1,50,20)
+v = [5,5,1,4,5,8]
 print(v)
 sorted = insertion(v)
 print(sorted)

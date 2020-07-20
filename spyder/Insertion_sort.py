@@ -19,7 +19,8 @@ def insertionSort(v):
      alist[position] = currentvalue
 
 #alist = [54,26,93,17,77,31,44,55,20]
-alist = np.random.randint(1,50,30)
+# alist = np.random.randint(1,50,30)
+alist = [5,5,1,4,5,8]
 # alist = [5,2,4,6,1,3]
 insertionSort(alist)
 print(alist)
