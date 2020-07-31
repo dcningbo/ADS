@@ -1,7 +1,10 @@
+// ******** THIS VERSION PASSED THE GRADER IN WEEK 16 ********
+// ***********************************************************
+
 function genRandomArray(n) {
 	var arr = [];
 	for (var i = 0; i < n; i++) {
-		arr[i] = Math.round(10 * Math.random());
+		arr[i] = Math.round(20 * Math.random());
 	}
 	return arr;
 }
@@ -34,7 +37,7 @@ function search(array, x, left, right) {
 	if (left > right) {
 		return false;
 	}
-	var m = (left + right) / 2;
+	var m = Math.floor((left + right) / 2);
 	if (array[m] == x) {
 		return true;
 	} else if (array[m] > x) {
@@ -52,6 +55,13 @@ function binarySearch(array, x) {
 	return search(array, x, L, R)
 	// return a Boolean: true if x is in array, and false otherwise
 }
+var array = genRandomArray(20)
+console.log(array)
+var sortedArray = bubbleSort(array)
+
+console.log(sortedArray)
+var result = binarySearch(sortedArray, 5)
+console.log(result)
 
 
 // Do not modify the code below this point--------------------------------
